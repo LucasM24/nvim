@@ -12,7 +12,9 @@ require('telescope').setup{
     file_ignore_patterns = {"vendor", "*.yml", ".svg"},
     sorting_strategy = "ascending",
     layout_config = {
-      width = .8
+      width = .8,
+      mirror = true,
+      prompt_position = "top"
     },
     selection_caret = "  ",
     entry_prefix = "  ",
