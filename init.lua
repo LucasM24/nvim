@@ -7,3 +7,4 @@ require('config.neovim.colorscheme')
 -- Plugins -- 
 require('config.packer.plugins')
 require('config.nvim-tree')
+require('config.telescope')
