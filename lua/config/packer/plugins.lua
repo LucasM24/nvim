@@ -109,6 +109,13 @@ return packer.startup(function(use)
   --Colorizer
   use 'norcalli/nvim-colorizer.lua'
 
+  --Lsp
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
