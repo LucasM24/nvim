@@ -82,6 +82,8 @@ return packer.startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use 'vimwiki/vimwiki'
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
