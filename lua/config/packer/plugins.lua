@@ -73,6 +73,8 @@ return packer.startup(function(use)
     run = ':TSUpdate'
   }
 
+  use 'nvim-treesitter/playground'
+
   use {
     "windwp/nvim-autopairs",
   }
@@ -112,6 +114,15 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- Packer
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+  use {
+    'tanvirtin/vgit.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
