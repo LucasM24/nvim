@@ -30,6 +30,7 @@ return {
         "cssls",
         "lua_ls",
         "emmet_ls",
+        "texlab",
       },
     })
   end,
