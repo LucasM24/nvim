@@ -20,10 +20,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Remap save command
 keymap('n', '<Leader>w', ':write<CR>',{})
 
--- Remap quit command
--- keymap('n', '<Leader>q', ':bd<CR>',{})
--- keymap('n', '<Leader>q', ':q<CR>',{})
-
 -- Center the view when search something in the file
 keymap('n', 'n', 'nzzzv', {})
 keymap('n', 'N', 'Nzzzv', {})
