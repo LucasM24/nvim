@@ -3,9 +3,11 @@ local lspconfig = require 'lspconfig'
 -- Setup language servers.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lspconfig.phpactor.setup {
+lspconfig.stimulus_ls.setup {
   capabilities = capabilities,
-  -- root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json"),
+  cmd = { "stimulus-language-server", "--stdio" },
+  filetypes = { "html", "ruby", "eruby", "blade", "php" },
+  root_dir = lspconfig.util.root_pattern('Gemfile', '.git'),
 }
 
 lspconfig.ts_ls.setup {
@@ -47,6 +49,7 @@ lspconfig.lua_ls.setup {
     Lua = {}
   }
 }
+
 lspconfig.volar.setup {
   capabilities = capabilities,
   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },

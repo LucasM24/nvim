@@ -35,3 +35,9 @@ augroup END]]
 
 -- Avoid comment in next line
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
+
+vim.filetype.add({
+    pattern = {
+        [".*%.blade%.php"] = "blade",
+    },
+})
