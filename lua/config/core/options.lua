@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 
 -- Sets config
 set.nu = true -- Show the number of the lines
-set.relativenumber = false -- Set relative numbers
+set.relativenumber = true -- Set relative numbers
 set.wrap = false -- Deactivate the line wrapping
 set.fileencoding = 'utf-8'
 set.termguicolors = true
@@ -40,4 +40,11 @@ vim.filetype.add({
     pattern = {
         [".*%.blade%.php"] = "blade",
     },
+})
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*/waybar/config",
+  callback = function()
+    vim.bo.filetype = "jsonc"
+  end,
 })
